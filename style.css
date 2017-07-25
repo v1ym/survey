@@ -2,6 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #cce0ff;
 }
 
 .jumbotron {
@@ -11,19 +12,44 @@ body, html {
 
 .container {
   text-align: center;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  vertical-align: top;
 }
 
 .container img {
-  width: 400px;
+  transition-timing-function: ease;
+  transition: width .15s, border .25s, border-radius 0.15s;
+  width: 350px;
   border: 5px solid black;
-  margin: 0 10px 0 10px;
+  border-radius: 0;
+  margin: 20px 10px 0 10px;
+
+}
+
+.container .inactive {
+  transition: opacity .15s;
+  opacity: .3;
+  background: blue;
 }
 .container .active {
-  border: 20px solid blue;
+  transition-timing-function: ease;
+  transition: width 0.15s, border 0.25s, border-radius 0.15s, opacity 0.15s;
+  border: 20px solid #0052cc;
+  border-radius: 20px;
   width: 370px;
+  opacity: 1;
+
 }
 label {
   cursor: pointer;
+}
+label p {
+  font-size: 40px;
+  margin-top: 5px;
 }
 input {
   display: none;
@@ -33,12 +59,27 @@ input {
   display: inline-block;
 }
 
+
 #submit {
   font-size: 40px;
   width: 200px;
   height: 100px;
   border: 5px solid black;
   border-radius: 20px;
-  background: gray;
+  transition: background .25s;
+  background: #3385ff;
   cursor: pointer;
+  position: fixed;
+  top: 600px;
+  margin: 0 auto;
+  margin-left: -100px;
+}
+
+#submit:hover {
+  transition: background .5s, color .4s;
+  background: #0052cc;
+  color: white;
+}
+#submit:active {
+  padding: 8px 13px 6px;
 }

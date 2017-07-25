@@ -5,6 +5,8 @@
   <link href="./style.css" type="text/css" rel="stylesheet"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="./main.js" type="text/javascript"></script>
+
+  <script data-cfasync="false" type="text/javascript" src="./form-submission-handler.js"></script>
 </head>
 <body>
 
@@ -13,21 +15,22 @@
   </div>
 
   <div class="container">
-    <form id="gform">
+    <form id="gform" name="quiz" method="POST" action="https://script.google.com/macros/s/AKfycbxq9WJWATS6BKU9ktS4eTtexiLhPHEk7JO2V02kr1xdAYXsBGQ/exec">
       <div class="card">
         <input type="radio" name="choice" id="bbq" value="bbq"></input>
-        <label for="bbq"><img src="./square.png"/></label>
-        <label for="bbq"><p>Backyard BBQ</p></label>
+        <label for="bbq"><img src="./bbq.png"/></label>
+        <label for="bbq"><p>BBQ Party</p></label>
       </div>
       <div class="card">
         <input type="radio" name="choice" id="restaurant" value="restaurant"></input>
-        <label for="restaurant"><img src="./square.png"/></label>
-        <label for="restaurant"><p>Restaurant Dinner</p></label>
+        <label for="restaurant"><img src="./restaurant.png"/></label>
+        <label for="restaurant"><p>Restaurant Party</p></label>
       </div>
-    </form>
+
 
     <br/>
     <button id="submit">submit</button>
+  </form>
   </div>
 
 </body>

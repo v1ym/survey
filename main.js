@@ -1,6 +1,8 @@
 $(document).ready(function() {
   $("img").click(function() {
     $("img").removeClass("active");
+    $("img").addClass("inactive");
+    $(this).removeClass("inactive");
     $(this).toggleClass("active");
   }); //end of img click
   $("p").click(function() {
@@ -11,9 +13,5 @@ $(document).ready(function() {
   $("#submit").click(function() {
     var test = $('input[name="choice"]:checked').val();
     console.log(test)
-
-
-
   });//end of submit click
-
 }); //end of ready function
