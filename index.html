@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey</title>
+  <link href="./style.css" type="text/css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="./main.js" type="text/javascript"></script>
+</head>
+<body>
+
+  <div class="jumbotron">
+    <h1>Please select one<h1>
+  </div>
+
+  <div class="container">
+    <form id="gform">
+      <div class="card">
+        <input type="radio" name="choice" id="bbq" value="bbq"></input>
+        <label for="bbq"><img src="./square.png"/></label>
+        <label for="bbq"><p>Backyard BBQ</p></label>
+      </div>
+      <div class="card">
+        <input type="radio" name="choice" id="restaurant" value="restaurant"></input>
+        <label for="restaurant"><img src="./square.png"/></label>
+        <label for="restaurant"><p>Restaurant Dinner</p></label>
+      </div>
+    </form>
+
+    <br/>
+    <button id="submit">submit</button>
+  </div>
+
+</body>
+</html>
