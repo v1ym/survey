@@ -13,5 +13,13 @@ $(document).ready(function() {
   $("#submit").click(function() {
     var test = $('input[name="choice"]:checked').val();
     console.log(test)
+
+    $(".card").css("visibility", "hidden");
+    $("#submit").css("visibility", "hidden");
+    $(".jumbotron").css("visibility", "hidden");
+    $(".submission").fadeIn(300);
+    // $(".submission").css("visibility", "visible");
+
+
   });//end of submit click
 }); //end of ready function

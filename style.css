@@ -1,19 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|PT+Sans:700');
+
 body, html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Architects Daughter", "PT Sans";
+  font-weight: bold;
   background: #cce0ff;
 }
 
 .jumbotron {
   text-align: center;
+  margin: 30px 0 10px;
 
+}
+.jumbotron h1 {
+  font-size: 60px;
+  margin: 0;
 }
 
 .container {
   text-align: center;
   width: 900px;
   margin: 0 auto;
+
 }
 
 .card {
@@ -70,7 +79,8 @@ input {
   background: #3385ff;
   cursor: pointer;
   position: fixed;
-  top: 600px;
+  top: 640px;
+  left: 50%;
   margin: 0 auto;
   margin-left: -100px;
 }
@@ -81,5 +91,46 @@ input {
   color: white;
 }
 #submit:active {
+  padding: 8px 13px 6px;
+}
+
+.submission {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: -400px;
+  height: 240px;
+  width: 500px;
+  border: 5px solid black;
+  background: #66a3ff;
+  display: none;
+
+}
+
+.submission p {
+  font-size: 32px;
+  color: black;
+}
+
+#close {
+  font-size: 35px;
+  width: 170px;
+  height: 85px;
+  border: 5px solid black;
+  border-radius: 20px;
+  transition: background .25s;
+  background: #3385ff;
+  cursor: pointer;
+  position: relative;
+  top: -8px;
+  z-index: 1;
+}
+
+#close:hover {
+  transition: background .5s, color .4s;
+  background: #0052cc;
+  color: white;
+}
+#close:active {
   padding: 8px 13px 6px;
 }
