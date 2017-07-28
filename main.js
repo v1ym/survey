@@ -12,12 +12,7 @@ $(document).ready(function() {
   });//end of p click
 
   $("#submit").click(function() {
-
-
-    var choice = "test";
-    console.log(choice);
-    //cat[1] = $('input[name="q1"]:checked').val();
-    choice = $('input[name="choice"]:checked').val();
+    var choice = $('input[name="choice"]:checked').val();
     console.log(choice);
 
     if (choice == undefined) {
