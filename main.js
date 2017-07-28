@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("img").click(function() {
+    $(".error").css("display", "none");
     $("img").removeClass("active");
     $("img").addClass("inactive");
     $(this).removeClass("inactive");
@@ -11,15 +12,19 @@ $(document).ready(function() {
   });//end of p click
 
   $("#submit").click(function() {
-    var test = $('input[name="choice"]:checked').val();
-    console.log(test)
-
-    $(".card").css("visibility", "hidden");
-    $("#submit").css("visibility", "hidden");
-    $(".jumbotron").css("visibility", "hidden");
-    $(".submission").fadeIn(300);
-    // $(".submission").css("visibility", "visible");
-
-
+    var choice = $('input[name="choice"]:checked').val();
+    if (choice == undefined) {
+      $(".error").fadeIn("fast");
+    }
+    else if (choice !== undefined) {
+      $(".card").css("visibility", "hidden");
+      $("#submit").css("visibility", "hidden");
+      $(".jumbotron").css("visibility", "hidden");
+      $(".submission").fadeIn(300);
+    };
   });//end of submit click
+  $("#close").click(function() {
+    window.close();
+  });
+
 }); //end of ready function

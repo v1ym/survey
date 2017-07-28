@@ -3,7 +3,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: "Architects Daughter", "PT Sans";
+  font-family: "Architects Daughter", "PT Sans", sans-serif;
   font-weight: bold;
   background: #cce0ff;
 }
@@ -18,17 +18,13 @@ body, html {
   margin: 0;
 }
 
+
 .container {
   text-align: center;
   width: 900px;
   margin: 0 auto;
 
 }
-
-.card {
-  vertical-align: top;
-}
-
 .container img {
   transition-timing-function: ease;
   transition: width .15s, border .25s, border-radius 0.15s;
@@ -38,7 +34,6 @@ body, html {
   margin: 20px 10px 0 10px;
 
 }
-
 .container .inactive {
   transition: opacity .15s;
   opacity: .3;
@@ -53,6 +48,12 @@ body, html {
   opacity: 1;
 
 }
+
+.card {
+  vertical-align: top;
+  display: inline-block;
+}
+
 label {
   cursor: pointer;
 }
@@ -63,11 +64,6 @@ label p {
 input {
   display: none;
 }
-
-.card {
-  display: inline-block;
-}
-
 
 #submit {
   font-size: 40px;
@@ -84,7 +80,6 @@ input {
   margin: 0 auto;
   margin-left: -100px;
 }
-
 #submit:hover {
   transition: background .5s, color .4s;
   background: #0052cc;
@@ -106,7 +101,6 @@ input {
   display: none;
 
 }
-
 .submission p {
   font-size: 32px;
   color: black;
@@ -125,7 +119,6 @@ input {
   top: -8px;
   z-index: 1;
 }
-
 #close:hover {
   transition: background .5s, color .4s;
   background: #0052cc;
@@ -133,4 +126,12 @@ input {
 }
 #close:active {
   padding: 8px 13px 6px;
+}
+
+.error {
+  color: red;
+  font-size: 30px;
+  position: relative;
+  top: -54px;
+  display: none;
 }
