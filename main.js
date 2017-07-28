@@ -25,7 +25,8 @@ $(document).ready(function() {
     };
   });//end of submit click
   $("#close").click(function() {
-    window.close();
+    //window.close();
+    open(location, '_self').close();
   });
 
   $("label img").live("click", function() {
