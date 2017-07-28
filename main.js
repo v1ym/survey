@@ -12,11 +12,17 @@ $(document).ready(function() {
   });//end of p click
 
   $("#submit").click(function() {
-    var choice = $('input[name="choice"]:checked').val();
+
+
+    var choice = "test";
+    console.log(choice);
+    //cat[1] = $('input[name="q1"]:checked').val();
+    choice = $('input[name="choice"]:checked').val();
+    console.log(choice);
+
     if (choice == undefined) {
       $(".error").fadeIn("fast");
-    }
-    else if (choice !== undefined) {
+    } else if (choice !== undefined) {
       $(".card").css("visibility", "hidden");
       $("#submit").css("visibility", "hidden");
       $(".jumbotron").css("visibility", "hidden");
@@ -25,6 +31,10 @@ $(document).ready(function() {
   });//end of submit click
   $("#close").click(function() {
     window.close();
+  });
+
+  $("label img").live("click", function() {
+    $("#" + $(this).parents("label").attr("for")).click();
   });
 
 }); //end of ready function

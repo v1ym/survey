@@ -35,7 +35,7 @@ function getFormData() {
       }
     }
   });
-  console.log(data);
+  //console.log(data);
   return data;
 }
 
@@ -49,8 +49,8 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     // xhr.withCredentials = true;
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
-        console.log( xhr.status, xhr.statusText )
-        console.log(xhr.responseText);
+        //console.log( xhr.status, xhr.statusText )
+        //console.log(xhr.responseText);
         return;
     };
     // url encode form data for sending as post data
@@ -61,7 +61,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   }
 /* test test test */
 function loaded() {
-  console.log('contact form submission handler loaded successfully');
+  //console.log('contact form submission handler loaded successfully');
   // bind to the submit event of our form
   var form = document.getElementById('gform');
   form.addEventListener("submit", handleFormSubmit, false);
